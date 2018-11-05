@@ -71,12 +71,11 @@ dependencyManagement {
     }
 }
 
-if (isAppengineTask()) {
     appengine {
         deploy {
         }
     }
-}
+
 
 boolean isAppengineTask() {
     return getGradle().getStartParameter().getTaskRequests().toString().contains("appengine");
